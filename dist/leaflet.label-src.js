@@ -502,8 +502,10 @@ L.Path.include({
 	},
 
 	_showLabel: function (e) {
-		this.label.setLatLng(e.latlng);
-		this._map.showLabel(this.label);
+		if (this.label) {
+			this.label.setLatLng(e.latlng);
+			this._map.showLabel(this.label);
+		}
 	},
 
 	_moveLabel: function (e) {
