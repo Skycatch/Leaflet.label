@@ -196,8 +196,6 @@ L.Label = (L.Layer ? L.Layer : L.Class).extend({
 	},
 
 	_onMoveEnd: function () {
-		console.log('_onMoveEnd');
-		console.log(this._animated);
 		if (!this._animated || this.options.direction === 'auto') {
 			this._updatePosition();
 		}
